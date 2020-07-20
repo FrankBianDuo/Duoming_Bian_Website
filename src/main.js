@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
+import VueKinesis from 'vue-kinesis'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+Vue.use(VueKinesis)
 Vue.config.productionTip = false
 
 new Vue({

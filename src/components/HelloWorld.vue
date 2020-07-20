@@ -6,26 +6,41 @@
         <span aria-hidden="true">&times;</span>
       </button>
     </div> -->
-    <div class="row">
+    <div style="    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9;">
+      <kinesis-container style="height: 100%;">
+              <kinesis-element class="mr-5" style="float: right;" :strength="20">
+                <h5> Vue.js </h5>
+              </kinesis-element>
+              <kinesis-element class="ml-5" :strength="100">
+                <p style="font-size: 35px; margin-left:40%"> Python </p>
+              </kinesis-element>
+              <kinesis-element class="mt-5" style="margin-left: 20%;" :strength="-60">
+                <p style="font-size: 50px;"> C++ </p>
+              </kinesis-element>
+              <kinesis-element class="mt-0" style="float: right; margin-right: 20%;" :strength="-80">
+                <p style="font-size: 40px; margin-right: 30%"> AWS </p>
+              </kinesis-element>
+              <kinesis-element class="mt-0" style="margin-left: 50%;" :strength="-100">
+                <p style="font-size: 30px;"> Node.js </p>
+              </kinesis-element>
+      </kinesis-container>
+    </div >
+    <div class="my-2 row">
       <div class="ml-4 col">
         <div class="d-flex justify-content-left align-items-center"> 
         <img style="width:100px;height:100px;" alt="Vue logo" src="../assets/frank.png">
         <h2 class="ml-3"> Hello, I'm Duoming! </h2>
         </div>
         <div class="mt-4 d-flex justify-content-left ">
-          <h5>I am ...</h5>
+          <h5>I am a senior at the University of Michigan studying computer science. </h5>
         </div>
-        <div class="d-flex justify-content-left ">
-          <h5>A front-end developer.</h5>
+        <div class="mt-2 d-flex justify-content-left ">
+          <h5>I am currently a software engineer intern with Pure Storage. </h5>
         </div>
-        <div class="d-flex justify-content-left ">
-          <h5>A person who likes to bring new ideas into reality.</h5>
-        </div>
-        <div class=" d-flex justify-content-left ">
-          <h5>A junior at the University of Michigan studying computer science.</h5>
-        </div>
-      </div>
-      <div class="col">
         <div class="mt-3 pt-3 d-flex justify-content-left ">
           <h5>Find me at...</h5> 
         </div>
@@ -35,15 +50,8 @@
           <img class="ml-3"  style="width:25px;height:25px;" alt="Vue logo" src="../assets/gmailIcon.png">
            <span class="ml-4"> bianduom@umich.edu </span>
         </div>
-        <div class="mt-5 d-flex justify-content-left ">
-          <h5 class="pt-3">Learn more about my...</h5> 
-          <button type="button" v-on:click="greet(0)" class="pt-2 ml-4 btn btn-link btn-lg"> experience </button>
-          <button type="button" v-on:click="greet(1)" class="pt-2 btn btn-link btn-lg"> education </button>
-          <button type="button" v-on:click="greet(2)" class="pt-2 btn btn-link btn-lg"> projects </button>
-        </div>
-        <div class="mt-2 d-flex justify-content-left">
-          <a href="../assets/Duoming_Bian_Resume_2019.pdf" download>Download My Resume</a>
-        </div>
+      </div>
+      <div class="col">
       </div>
     </div>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -51,12 +59,34 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
       </ol>
       <div class="carousel-inner" style="height: 550px;">
-        <div style="height: 550px; background-color: #00BCF2;" class="carousel-item active">
+        <div style="height: 550px; background-color: #f2531a;" class="carousel-item active">
           <div class="carousel-caption d-none d-md-block">
             <h3>Experience</h3>
-            <p>Learn about My internship with Productiv and more</p>
+            <p>Learn about my internship with Pure Storage and more</p>
+          </div>
+          <div class="row">
+            <div class="col-3 d-flex flex-column mt-0 justify-content-left">
+              <img style="width:100%;" alt="Vue logo" src="../assets/pure.png">
+            </div>
+            <div class="col-8 text-left text-white mt-5 mr-2 justify-content-left align-content-center">
+              <h4> Internship with Pure Storage </h4>
+              <p> I worked as a software engineer intern with Pure Storage during summer 2020. Pure Storage is a data storage solution provider and serves enterprises' storage needs.</p>
+              <p> As an intern, I joined Pure's CTO team and worked on an emulator project. The motivation is to create a much more lightweight development environment and an elegant sales demostration. Previously, all configuration requests to the storage arrays are carried out on actual arrays; with our emulator, these requests are handled by a lightweight python process that mimicks the real arrays' response without actaully carrying out these operations. </p>
+              <p>
+                Throughout the project, I had to chance to collaborate with two other interns and work on the project together. We had a lot of freedom to design our own approach to implement the emulator. There wasn't a given timeline to follow; rather, we came up with our own milestones to reach throughout the internship.
+              </p>
+              <p> Although the internship was in a remote setting, we had many intern events that were hosted by the University Recruiting team and had opportunities to connect with other interns as well as full-time employees. With Pure, I was able to grow both as a software engineer and as a person. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div style="height: 550px; background-color: #00BCF2;" class="carousel-item">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Experience</h3>
+            <p>Learn about my internship with Productiv</p>
           </div>
           <div class="row">
             <div class="col-3 d-flex flex-column mt-5 justify-content-left">
@@ -110,11 +140,11 @@
           </div>
         </div>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <a style="z-index: 10;" class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <a style="z-index: 10;" class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
